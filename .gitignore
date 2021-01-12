@@ -1,3 +1,6 @@
+arrow/
+_build/
+
 # Prerequisites
 *.d
 

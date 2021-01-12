@@ -1,0 +1,18 @@
+name: arrow-pybind
+channels:
+  - conda-forge
+
+dependencies:
+  - python==3.8
+  - pybind11
+  - cmake
+  - snappy
+  - libutf8proc
+  - boost
+  - boost-cpp
+  - thrift-cpp 
+  
+  # For notebook tests
+  - jupyterlab
+  - pandas
+  # - pyarrow # Including results in Arrow pybindtest crashes

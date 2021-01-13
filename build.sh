@@ -9,8 +9,8 @@ if [ ! -f "$THIS_SCRIPT" ]; then
     exit 1
 fi
 
-: ${ARROW_CRASH_ROOT:=${PWD}}
-: ${ARROW_CPP:=${ARROW_CRASH_ROOT}/arrow/cpp}
+: ${ARROW_PYBIND_ROOT:=${PWD}}
+: ${ARROW_CPP:=${ARROW_PYBIND_ROOT}/arrow/cpp}
 : ${ARROW_INSTALL:=${ARROW_CPP}/arrow-install}
 
 if [ ! -d "$ARROW_CPP" ]; then
@@ -44,7 +44,7 @@ echo "=="
 echo "== Building Python module"
 echo "=="
 echo
-cd $ARROW_CRASH_ROOT
+cd $ARROW_PYBIND_ROOT
 cmake -H. -B_build \
     -DCMAKE_PREFIX_PATH=${CONDA_PREFIX} \
     -DCMAKE_INSTALL_PREFIX=${ARROW_INSTALL} 

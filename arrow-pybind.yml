@@ -4,15 +4,18 @@ channels:
 
 dependencies:
   - python==3.8
-  - pybind11
   - cmake
   - snappy
   - libutf8proc
   - boost
   - boost-cpp
   - thrift-cpp 
+  - pybind11
   
-  # For notebook tests
+  # For jupyter notebook testing, reading
+  # parquet file into pandas dataframes
   - jupyterlab
   - pandas
-  # - pyarrow # Including results in Arrow pybindtest crashes
+  - pip
+  - pip:
+    - pyarrow # Must install from pip, conda-force install results in Arrow pybindtest bus error
